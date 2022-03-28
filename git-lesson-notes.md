@@ -9,8 +9,6 @@ Git Graph
 A cosa serve il pull
 Extra: README.md file
 
-esperimento:
-
 - nuovo progetto
 - clono nuovo progetto in locale
 - commit su github (spiego modifica readme)
@@ -25,13 +23,11 @@ Quando pullare? Prima di iniziare a lavorare.
 Ma anche prima di pushare!
 ogni commit deve compilare (non si pushano commit con errori)
 
-pull = fetch + merge !
+pull = fetch + merge (delle tutte le modifiche remote)!
 
 ## MERGE
 
-ALTRO: come aggiungono collaboratori
-
-esperimento:
+ALTRO: come aggiungo collaboratori
 
 - aggiungo nuovo utente (o altro studente)
 - faccio fare una modifica al readme da github con altro utente
@@ -50,8 +46,6 @@ ALTRO: come si identificano i commit (id e HEAD)
 Come fare se devo fare tante e modifiche, tipo una nuova feature del programma??
 Oppure qualcosa di invasivo che fino a quando non è finito non serve agli altri?
 
-esperimento:
-
 - creo branch
 - faccio due commit
 - checkout main
@@ -59,13 +53,15 @@ esperimento:
 - checkout feature, checkout main
 - mergio branch su main con git graph
 
-```
-git checkout master
-git merge new-branch
-```
+Stampa branch corrente:  
+`git branch`
+Crea branch:  
+`git branch develop`
+Crea una branch e fa checkout in quella:  
+`git checkout -b my-feature-branch`
 
 Non si testa in produzione!
-`dev o develop`
+`dev o develop` branch.
 
 come mergiare una branch, meglio farlo solo sul main/develop.
 
@@ -73,17 +69,6 @@ come mergiare una branch, meglio farlo solo sul main/develop.
 git checkout main
 git merge my-feature-branch
 ```
-
-pagina 8, 17 slides!
-
-ALTRO:
-Stampa branch corrente:  
-`git branch`
-Crea branch:  
-`git branch develop`
-
-Crea una branch e fa checkout in quella:  
-`git checkout -b my-feature-branch`
 
 ## GITHUB
 
@@ -105,7 +90,7 @@ https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.h
 
 https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request
 
-## Sviluppo architettura
+## Sviluppo architettura avanzata
 
 develop branch con feature branches
 su main: releases e branch di hotfix
